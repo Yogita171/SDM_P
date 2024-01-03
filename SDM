@@ -1,3 +1,20 @@
+
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+git config --global --unset core.gitproxy
+
+C:\Users\IET>git config --global http.proxy http://exam@192.168.10.4:808
+
+C:\Users\IET>git config --global credential.helper wincred
+
+C:\Users\IET>git config --global user.name ""
+
+C:\Users\IET>git config --global user.email ""
+C:\Users\IET>git config --global user.password ""
+
+
+==================================================================
+SDM
 1) create repository 
 2) add .gitignore for node and readme file
 3)Make folder and clone this repo
