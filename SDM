@@ -25,15 +25,20 @@ SDM
 8) enter till yes
 9) open code .
 10)make file server.js
-           	var express=require('express');
-	    	var app=express();
-		app.use(express.static('public'))
-		app.get("/",(req, res)=>{res.send("Welcome to  IET");});
-		app.get("/product",(req, res)=>{var p={ "id":45, "title":"Gerbera","description":"Wedding Flower", "unitprice":14, "quatity":7000 };
-                                       res.send(p);
-		});
-		app.listen(8000);
-		console.log("App is listening on port 8000");
+           	const express=require("express");
+const path=require("path")
+const app=express()
+
+const staticfolder=express.static(path.join(__dirname,"public"));
+app.use(staticfolder);
+app.get("/",(req,res)=>{
+  res.sendFile(path.join(__dirname,"index.html"))
+
+})
+app.listen(3000,()=>{
+  console.log("server is listening on port 3000...")
+
+})
 11)cmd->npm install express
 12)create a text file in same folder(Add docker file)
 13)"Dockerfile" ext->allfiles
